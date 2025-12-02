@@ -10,8 +10,8 @@ let updateInterval = null;
 
 // Sound files configuration
 const soundFiles = {
-    piam: ['Não Cá Vàng'].map(f => `./sound/_p.iam_/${f}.m4a`),
-    Sonnguyn: ['Người như anh xứng đáng có đơn'].map(f => `./sound/Sonnguyn/${f}.m4a`)
+    piam: ['Não Cá Vàng'].map(f => `./sound/piam/${f}.m4a`),
+    sonnguyn: ['Người như anh xứng đáng có đơn'].map(f => `./sound/sonnguyn/${f}.m4a`)
 };
 
 const audioCache = {};
@@ -19,13 +19,13 @@ const audioCache = {};
 // Category names mapping
 const categoryNames = {
     'piam': '_p.iam_',
-    'Sonnguyn': 'Sonnguyn'
+    'sonnguyn': 'Sonnguyn'
 };
 
 // Vinyl images mapping
 const vinylImages = {
-    'piam': 'disque/p.iam.png',
-    'Sonnguyn': 'disque/sonnguyn.png'
+    'piam': 'disque/piam.png',
+    'sonnguyn': 'disque/sonnguyn.png'
 };
 
 // ============ PRELOAD SOUNDS ============
@@ -167,7 +167,7 @@ function setupAudioPlayer(audioElement, category, fileName) {
             if (audioProgress) audioProgress.style.width = '0%';
             if (currentTimeEl) currentTimeEl.textContent = '00:00';
             if (totalTimeEl) totalTimeEl.textContent = '00:00';
-            if (vinylDisc) vinylDisc.src = 'disque/p.iam.png';
+            if (vinylDisc) vinylDisc.src = 'disque/piam.png';
         }, 2000);
     });
     
